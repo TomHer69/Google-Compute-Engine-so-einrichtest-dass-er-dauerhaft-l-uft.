@@ -1,0 +1,19 @@
+
+// SSH im Browser
+//siehe Bilder
+sudo apt update
+sudo apt install -y nodejs npm git
+(Bei manchen Distros ist node noch alt → ggf. via nvm eine neuere Node-Version installieren.)
+
+git clone https://github.com/TomHer69/my_server.git
+cd my_server
+npm install
+
+
+
+//Damit dein Server nicht stoppt, wenn du dich abmeldest:
+sudo npm install -g pm2
+
+
+//Server starten:
+pm2 start server.js --name meinserver
